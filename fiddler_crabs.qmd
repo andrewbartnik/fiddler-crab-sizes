@@ -1,0 +1,11 @@
+---
+title: "fiddler-crabs!"
+format: html
+editor: visual
+---
+
+```{r}
+library(lterdatasampler)
+
+pie_crab 
+```
