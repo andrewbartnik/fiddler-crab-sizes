@@ -20,4 +20,16 @@ library(tidyverse)
 
 ggplot(data=pie_crab, aes(x=size, y=latitude)) + geom_point(alpha=0.5) 
    
+
+```
+
+```{r}
+crab_table <- pie_crab |> 
+  group_by(site) |> 
+  summarise(Mean = round(mean(size), 2), SD = round(sd(size), 2), sample_size = n())
+```
+
+```{r}
+kable(crab_table, col.names=c('Site', 'Mean', 'SD', 'Sample Size')) |> 
+  kable_styling(bootstrap_options = 'striped', full_width = FALSE)
 ```
