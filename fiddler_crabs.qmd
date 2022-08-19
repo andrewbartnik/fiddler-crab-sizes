@@ -20,4 +20,11 @@ library(tidyverse)
 
 ggplot(data=pie_crab, aes(x=size, y=latitude)) + geom_point(alpha=0.5) 
    
+
+```
+
+```{r}
+table <- pie_crab |> 
+  group_by(site) |> 
+  summarise(mean = round(mean(size), 2), sd = round(sd(size), 2), sample_size = n())
 ```
