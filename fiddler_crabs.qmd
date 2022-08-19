@@ -2,16 +2,22 @@
 title: "fiddler-crabs!"
 format: html
 editor: visual
+execute: 
+  warning: false
+  message: false
+  echo: false
 ---
 
 ```{r}
 library(lterdatasampler)
+library(kableExtra)
+library(tidyverse)
 
-pie_crab 
 ```
 
 ```{r}
-library(tidyverse)
+#| fig-cap: "crab size vs latitude"
 
-ggplot(data=pie_crab, aes(x=size, y=latitude)) + geom_point(alpha=0.5)
+ggplot(data=pie_crab, aes(x=size, y=latitude)) + geom_point(alpha=0.5) 
+   
 ```
